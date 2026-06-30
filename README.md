@@ -12,7 +12,7 @@ Verify fixes this, giving you numbered outputs on your test cases, making it eas
 --- 
 
 ## ✅ Requirements 
-- go (developed and tested on v1.26.4)
+- [go](https://go.dev/doc/install) (developed and tested on v1.26.4)
 - [Boot.dev CLI tool](https://github.com/bootdotdev/bootdev) (developed and tested on v1.29.6)
 
 ---
@@ -27,13 +27,12 @@ go install .
 ```
 
 ### Setup the Verify Alias
-To run properly, you need to setup add an alias to your shell configuration file (e.g., `.bashrc`, `.zshrc`, or `.profile`). This tells the terminal to run `verify` whenever you run the `bootdev` cli tool.
-
-Add this to your shell config file:
+For Verify to run properly, you need to add a new alias to your shell configuration file (e.g., `.bashrc`, `.zshrc`, or `.profile`):
 ```bash
 #verify alias for the bootdev cli tool
 alias bootdev='verify' #comment out or delete this alias if you want to disable Verify, forcing tests to exclusively run through the official bootdev cli.
 ```
+This tells the terminal to run `verify` whenever you run the `bootdev` cli tool.
 
 Save the file and restart your terminal for the change to take effect.
 
