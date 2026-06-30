@@ -1,6 +1,6 @@
 # 🔎 Verify 
 
-Verify is a lightweight wrapper for the [Boot.dev CLI](https://github.com/bootdotdev/bootdev). It intercepts bootdev run commands to provide numbered test cases and improved visual formatting, improving the student experience.
+Verify is a lightweight wrapper for the [Boot.dev CLI](https://github.com/bootdotdev/bootdev). It intercepts bootdev run commands to provide numbered test cases, improving the student experience.
 
 ---
 
