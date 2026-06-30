@@ -35,7 +35,7 @@ Add this to your shell config file:
 alias bootdev='verify' #comment out or delete this alias if you want to disable Verify, forcing tests to exclusively run through the official bootdev cli.
 ```
 
-Restart you terminal for the change to take effect.
+Save the file and restart your terminal for the change to take effect.
 
 ---
 
