@@ -1,1 +1,66 @@
-🔎
+# 🔎 Verify 
+
+Verify is a lightweight wrapper for the [Boot.dev CLI](https://github.com/bootdotdev/bootdev). It intercepts bootdev run commands to provide numbered test cases and improved visual formatting, improving the student experience.
+
+---
+
+## 🏋️ Motivation
+Submitting your `run` cases with the `bootdev run <lesson_id>` command is easy, but then you have the arduous task of _verifying_ which of the run tests actually passed. In the standard bootdev cli output, test cases are not numbered and outputs can sometimes be very long, making your search **painful**. 
+
+Verify fixes this, giving you numbered outputs on your test cases, making it easier to locate test headers and _verify_ result, saving you time _and_ frustration.
+
+--- 
+
+## ✅ Requirements 
+- go (developed and tested on v1.26.4)
+- [Boot.dev CLI tool](https://github.com/bootdotdev/bootdev) (developed and tested on v1.29.6)
+
+---
+
+## 🚀 Getting Started
+
+### Install Verify
+```bash
+git clone https://github.com/breaking-boot/verify.git
+cd verify
+go install .
+```
+
+### Setup the Verify Alias
+To run properly, you need to setup add an alias to your shell configuration file (e.g., `.bashrc`, `.zshrc`, or `.profile`). This tells the terminal to run `verify` whenever you run the `bootdev` cli tool.
+
+Add this to your shell config file:
+```bash
+#verify alias for the bootdev cli tool
+alias bootdev='verify' #comment out or delete this alias if you want to disable Verify, forcing tests to exclusively run through the official bootdev cli.
+```
+
+Restart you terminal for the change to take effect.
+
+---
+
+## 🌱 Future Plans
+- Numbered run-submit tests
+- Improved visual indicators
+- Quick submit after run case
+- Check for expected results in run cases
+
+---
+
+## 📄 Contributing
+
+If you have suggestions or fixes, feel free to open an issue or pull request 👍
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👤 Author
+
+[jeffschoe](https://github.com/jeffschoe)
+
+---
