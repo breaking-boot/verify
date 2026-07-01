@@ -45,7 +45,7 @@ bootdev run <id> # run
 bootdev run <id> [-s/--submit] #submit
 ```
 
-Entering other command arguments/flags may have unintended consequences. Typically any issues/error are still caught by the original bootdev cli and output to the terminal. You may still see a cli output saying that Verify has run, even though no modification was actually applied to the original bootdev output.
+Entering other command arguments/flags may have unintended consequences. Typically any issues/errors are still caught by the original bootdev cli and output to the terminal. You may still see a cli output saying that Verify has run, even though no modification was actually applied to the original bootdev output.
 
 ---
 
