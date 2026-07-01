@@ -13,7 +13,7 @@ Verify fixes this, giving you numbered outputs on your test cases, making it eas
 
 ## ✅ Requirements 
 - [go](https://go.dev/doc/install) (developed and tested on v1.26.4)
-- [Boot.dev CLI tool](https://github.com/bootdotdev/bootdev) (developed and tested on v1.29.6)
+- [bootdev cli tool](https://github.com/bootdotdev/bootdev) (developed and tested on v1.29.6)
 
 ---
 
