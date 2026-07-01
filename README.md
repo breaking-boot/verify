@@ -5,7 +5,7 @@ Verify is a lightweight wrapper for the [Boot.dev CLI](https://github.com/bootdo
 ---
 
 ## 🏋️ Motivation
-Submitting your `run` cases with the `bootdev run <lesson_id>` command is easy, but then you have the arduous task of _verifying_ which of the run tests actually passed. In the standard bootdev cli output, test cases are not numbered and outputs can sometimes be very long, making your search **painful**. 
+Submitting your `run` cases with the `bootdev run <id>` command is easy, but then you have the arduous task of _verifying_ which of the run tests actually passed. In the standard bootdev cli output, test cases are not numbered and outputs can sometimes be very long, making your search **painful**. 
 
 Verify fixes this, giving you numbered outputs on your test cases, making it easier to locate test headers and _verify_ result, saving you time _and_ frustration.
 
