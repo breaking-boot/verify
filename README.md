@@ -41,7 +41,7 @@ Save the file and restart your terminal for the change to take effect.
 ---
 
 ## Usage Notes
-Verify accepts any commands that the official bootdev cli accept, but our custom logic is only applied to commands in the format of:
+Verify accepts any commands that the official bootdev cli accepts, but our custom logic is only applied to commands in the format of:
 ```bash
 bootdev run <id> # run
 ```
