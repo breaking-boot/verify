@@ -41,10 +41,9 @@ Save the file and restart your terminal for the change to take effect.
 ---
 
 ## Usage Notes
-Verify expects your commands to be in the format of:
+Verify accepts any commands that the official bootdev cli accept, but our custom logic is only applied to commands in the format of:
 ```bash
 bootdev run <id> # run
-bootdev run <id> [-s/--submit] #submit
 ```
 
 Entering other command arguments/flags may have unintended consequences. Typically any issues/errors are still caught by the original bootdev cli and output to the terminal. You may still see a cli output saying that Verify has run, even though no modification was actually applied to the original bootdev output.
