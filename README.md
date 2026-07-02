@@ -50,9 +50,9 @@ Entering other command arguments/flags may have unintended consequences. Typical
 ---
 
 ## 🌱 Future Plans
-- Numbered run-submit tests
+- Numbered run-submit tests ❌ (abandoned, for now)
 - Improved visual indicators
-- Quick submit after run case
+- Quick submit after run case ✅
 - Check for expected results in run cases
 
 ---
