@@ -9,6 +9,8 @@ Submitting your `run` cases with the `bootdev run <id>` command is easy, but the
 
 Verify fixes this, giving you numbered outputs on your test cases, making it easier to locate test headers and _verify_ result, saving you time _and_ frustration.
 
+Happy with your test results? Great! Submitting the graded version is just a 'y' key away. 
+
 --- 
 
 ## ✅ Requirements 
