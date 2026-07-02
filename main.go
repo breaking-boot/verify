@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"os/exec"
@@ -37,22 +38,24 @@ func main() {
 		}
 	}
 
-	// Only intercept if command is 'run' WITHOUT an '-s' or '--submit' flag
+	// Intercept as run if command is 'run' WITHOUT an '-s' or '--submit' flag
 	if isRun && !isSubmit {
+		fmt.Printf("🐻 Official 'bootdev run <id>' command detected.\n")
+		fmt.Printf("🔎 Verify intercepting...\n\n")
 		handleRun(realBootDevPath, args)
 		return
 	}
 
 	// Otherwise, let the official CLI handle it
+	fmt.Printf("🐻 Official bootdev <id> run command not detected.\n")
+	fmt.Printf("🐻 Passing through to the official bootdev cli...\n\n")
 	passThrough(realBootDevPath, args)
 }
 
 func handleRun(bin string, args []string) {
 
-	fmt.Printf("🐻 Official bootdev cli <run> command detected.\n")
-	fmt.Printf("🔎 Verify intercepting...\n\n")
-
 	cmd := exec.Command(bin, args...)
+	cmd.Env = append(os.Environ(), "CLICOLOR_FORCE=1") // Force colors even when capturing output
 	output, err := cmd.CombinedOutput()
 
 	if err != nil {
@@ -84,12 +87,29 @@ func handleRun(bin string, args []string) {
 		fmt.Println(line) // COMMENT THIS OUT WHEN USING DEBUGGING LINE AT TOP (after the for loop)
 
 	}
+
+	// After the loop finishes printing everything:
+	fmt.Printf("\n🔎 Verify: Tests complete. Would you like to submit for grading? (y/any_other_key): ")
+
+	reader := bufio.NewReader(os.Stdin)
+	input, _ := reader.ReadString('\n')
+	input = strings.TrimSpace(strings.ToLower(input))
+
+	if input == "y" || input == "yes" {
+		fmt.Printf("🔎 Verify: Submitting to official bootdev cli 🐻...\n\n")
+
+		// Add the -s flag to the current arguments
+		submitArgs := append(args, "-s")
+
+		// Use passThrough logic to ensure colors and interactivity work
+		passThrough(bin, submitArgs)
+	} else {
+		fmt.Println("🔎 Verify: Skipping submission. Happy coding!")
+	}
+
 }
 
 func passThrough(bin string, args []string) {
-
-	fmt.Printf("🐻 Official bootdev cli <run> command not detected.\n")
-	fmt.Printf("🐻 Passing through to the official bootdev cli...\n\n")
 
 	cmd := exec.Command(bin, args...)
 	// Connect the subprocess directly to the user's terminal
